@@ -1,0 +1,8 @@
+{
+  "name": "GOLDENKEYS",
+  "description": "Luxury studio MIDI keyboard workstation featuring multi-layered acoustic and analog sound engines, real-time harmonic analysis, convolution reverb, arpeggiator, and Standard MIDI export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

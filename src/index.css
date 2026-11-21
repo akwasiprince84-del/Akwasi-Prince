@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: #09090b;
+    color: #f4f1ea;
+    overflow-x: hidden;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Luxury brushed metallic chassis texture */
+.chassis-surface {
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(212, 175, 55, 0.045) 0%, transparent 55%),
+    linear-gradient(180deg, #16161b 0%, #101014 48%, #0c0c0f 100%);
+}
+
+.wood-cheek-left {
+  background:
+    linear-gradient(90deg, #1d140e 0%, #2b1d14 45%, #19110c 90%, #0b0806 100%);
+  box-shadow:
+    inset 1px 0 0 rgba(255, 224, 178, 0.08),
+    inset -2px 0 8px rgba(0, 0, 0, 0.75);
+}
+
+.wood-cheek-right {
+  background:
+    linear-gradient(90deg, #0b0806 0%, #19110c 10%, #2b1d14 55%, #1d140e 100%);
+  box-shadow:
+    inset -1px 0 0 rgba(255, 224, 178, 0.08),
+    inset 2px 0 8px rgba(0, 0, 0, 0.75);
+}
+
+.oled-glass {
+  background: radial-gradient(100% 100% at 50% 0%, #101116 0%, #070709 100%);
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 1px rgba(212, 175, 55, 0.16),
+    0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Base Key Press Animation */
+.key-base {
+  transition:
+    transform 45ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 70ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 70ms ease;
+}
+
+/* Key Color Themes — White/Natural Keys */
+.key-theme-ivory-ebony-white {
+  background: linear-gradient(180deg, #f3efe6 0%, #faf8f3 14%, #f4efe4 78%, #e4dccb 96%, #cfc4ae 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset -1px 0 0 rgba(0, 0, 0, 0.08),
+    0 4px 6px -1px rgba(0, 0, 0, 0.55),
+    0 2px 0 #b8ac95;
+  color: #5b5244;
+}
+.key-theme-ivory-ebony-black {
+  background: linear-gradient(180deg, #27272e 0%, #19191e 12%, #111115 78%, #1e1e24 92%, #09090b 100%);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.16),
+    0 5px 8px rgba(0, 0, 0, 0.8),
+    0 2px 0 #050506;
+}
+
+.key-theme-rosewood-cream-white {
+  background: linear-gradient(180deg, #f4ead7 0%, #fbf4e6 16%, #efe1c6 80%, #dcc8a4 96%, #c2aa80 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 252, 240, 0.92),
+    inset -1px 0 0 rgba(74, 34, 24, 0.12),
+    0 4px 6px -1px rgba(0, 0, 0, 0.55),
+    0 2px 0 #a98e62;
+  color: #5c3c2e;
+}
+.key-theme-rosewood-cream-black {
+  background: linear-gradient(180deg, #5c261d 0%, #421912 16%, #2b0f0b 80%, #3e1711 94%, #1a0806 100%);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 196, 172, 0.2),
+    0 5px 8px rgba(0, 0, 0, 0.82),
+    0 2px 0 #120503;
+}
+
+.key-theme-obsidian-gold-white {
+  background: linear-gradient(180deg, #24242b 0%, #1b1b21 16%, #141418 80%, #0e0e11 96%, #070709 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(233, 204, 116, 0.18),
+    inset -1px 0 0 rgba(212, 175, 55, 0.12),
+    0 4px 6px -1px rgba(0, 0, 0, 0.75),
+    0 2px 0 #040405;
+  color: #c7b073;
+}
+.key-theme-obsidian-gold-black {
+  background: linear-gradient(180deg, #d8b44c 0%, #b58d2c 14%, #876618 78%, #ad8528 94%, #57400b 100%);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 244, 198, 0.5),
+    0 5px 8px rgba(0, 0, 0, 0.85),
+    0 2px 0 #382805;
+}
+
+.key-theme-pearl-slate-white {
+  background: linear-gradient(180deg, #eef2f6 0%, #f8fafc 18%, #e2e8f0 80%, #cbd5e1 96%, #94a3b8 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.96),
+    inset -1px 0 0 rgba(15, 23, 42, 0.08),
+    0 4px 6px -1px rgba(0, 0, 0, 0.55),
+    0 2px 0 #64748b;
+  color: #475569;
+}
+.key-theme-pearl-slate-black {
+  background: linear-gradient(180deg, #334155 0%, #1e293b 16%, #0f172a 82%, #1e293b 94%, #020617 100%);
+  box-shadow:
+    inset 0 1px 1px rgba(226, 232, 240, 0.2),
+    0 5px 8px rgba(0, 0, 0, 0.82),
+    0 2px 0 #020617;
+}
+
+.key-theme-walnut-amber-white {
+  background: linear-gradient(180deg, #4f3524 0%, #3d281b 16%, #2c1c12 80%, #20140d 96%, #130b06 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 214, 165, 0.16),
+    inset -1px 0 0 rgba(0, 0, 0, 0.3),
+    0 4px 6px -1px rgba(0, 0, 0, 0.72),
+    0 2px 0 #0b0603;
+  color: #e6c697;
+}
+.key-theme-walnut-amber-black {
+  background: linear-gradient(180deg, #f3e4c8 0%, #e5cca1 16%, #c8a369 80%, #dfbe89 94%, #8f6b39 100%);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 249, 232, 0.55),
+    0 5px 8px rgba(0, 0, 0, 0.8),
+    0 2px 0 #664a22;
+}
+
+/* Key Surface Textures */
+.key-texture-gloss::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.04) 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.key-texture-matte::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.04);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.key-texture-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    rgba(0, 0, 0, 0.04) 1px,
+    rgba(0, 0, 0, 0.04) 3px
+  );
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Active Pressed Key States */
+.white-key-pressed {
+  transform: translateY(3px) scaleY(0.992);
+  filter: brightness(0.96);
+}
+
+.black-key-pressed {
+  transform: translateY(2.5px);
+  filter: brightness(1.1);
+}
+
+/* LED Fallboard & Key Lighting Animations */
+@keyframes ledPulse {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes ledAurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.led-pulse-anim {
+  animation: ledPulse 2.4s ease-in-out infinite;
+}
+
+.led-aurora-strip {
+  background: linear-gradient(90deg, #d4af37, #f59e0b, #38bdf8, #a78bfa, #d4af37);
+  background-size: 300% 100%;
+  animation: ledAurora 6s ease infinite;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0c0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.25);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.45);
+}
